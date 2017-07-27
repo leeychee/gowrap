@@ -24,8 +24,8 @@ func init() {
 	flag.StringVarP(&input, "input", "i", "", "Input file name, default is stdin.")
 	flag.StringVarP(&output, "output", "o", "", "Output file name, default is stdout.")
 	flag.StringVarP(&pkgname, "pkgname", "p", "", "package name, if not empty, output is in go's format.")
-	flag.StringVarP(&varname, "varname", "", "varname", "var name")
-	flag.BoolVarP(&version, "version", "v", false, "print version.")
+	flag.StringVarP(&varname, "varname", "v", "varname", "var name")
+	flag.BoolVarP(&version, "version", "", false, "print version.")
 	flag.Usage = func() {
 		fmt.Println(`Wrap string in go style with backtick(` + "`)")
 		fmt.Printf("Usage of %s\n", os.Args[0])
